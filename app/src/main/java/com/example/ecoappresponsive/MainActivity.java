@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText editContrasena,editUsuario;
     private Button btnIngresar;
 
+    private TextView txtcrearcuenta;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
         editUsuario = findViewById(R.id.editUsuario);
         editContrasena = findViewById(R.id.editContrasena);
         btnIngresar = findViewById(R.id.ingresar);
@@ -39,14 +41,28 @@ public class MainActivity extends AppCompatActivity {
                 String usuario = editUsuario.getText().toString();
                 String contrasena = editContrasena.getText().toString();
 
-                if (usuario.equals("PT333") && contrasena.equals("123456")){
-                Intent vistaprincipal = new Intent(com.example.ecoappresponsive.MainActivity.this,vista2.class);
-                startActivity(vistaprincipal);
-            }
-            else {
-                    Toast.makeText(MainActivity.this, "Acceso denegado", Toast.LENGTH_SHORT).show();
-                }
+
+                Intent ingresar = new Intent(MainActivity.this, vista2.class);
+
+                if (usuario.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Por favor ingresa tu usuario", Toast.LENGTH_SHORT).show();
+                } else if (contrasena.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Por favor ingresa tu contraseña", Toast.LENGTH_SHORT).show();
+                } else {
+                    startActivity(ingresar);}
             }
         });
+
+        txtcrearcuenta = findViewById(R.id.crearcuenta);
+
+        txtcrearcuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent crearcuenta = new Intent(MainActivity.this, Registro_usuario.class);
+                startActivity(crearcuenta);
+            }
+        });
+
+
     }
 }
