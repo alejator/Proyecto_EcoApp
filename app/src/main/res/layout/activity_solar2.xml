@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/serifdisplayregular"
-            android:text="¿Cuál cree que es el porcentaje de Energía\n solar en el país"
+            android:text="¿Cuál cree que es el porcentaje de Energía\n solar en el país?"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
