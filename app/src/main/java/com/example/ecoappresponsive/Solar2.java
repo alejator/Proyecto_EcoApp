@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +30,7 @@ public class Solar2 extends AppCompatActivity {
         btnAtras.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent regresar = new Intent(com.example.ecoappresponsive.Solar2.this,Energia_solar.class);
+                Intent regresar = new Intent(com.example.ecoappresponsive.Solar2.this,MenuEnergia.class);
                 startActivity(regresar);
             }
         });
@@ -38,8 +39,7 @@ public class Solar2 extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent siguiente = new Intent(com.example.ecoappresponsive.Solar2.this,Conservacion_agua.class);
-                startActivity(siguiente);
+                Toast.makeText(Solar2.this, "Respuestas enviadas", Toast.LENGTH_SHORT).show();
             }
         });
     }

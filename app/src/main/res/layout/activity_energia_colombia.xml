@@ -5,104 +5,173 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Energia_colombia"
-    android:background="@color/greenbgn">
+    android:background="@drawable/fonodoverde3"
+    tools:context=".Energia_colombia">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/header"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/energiarenovable" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/greenheader"
+        android:background="@color/darkgreen"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textologo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="0dp"
-            android:fontFamily="@font/serifdisplayregular"
-            android:text="EcoApp"
-            android:textColor="@color/white"
-            android:textSize="50sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/header"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="50dp"
-            app:layout_constraintEnd_toEndOf="@id/header"
-            app:layout_constraintTop_toTopOf="@id/header"
-            app:srcCompat="@drawable/logo_foreground" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/header_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/nordicalternativeregular"
+        android:text="EcoApp"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/btnatras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/greenheader"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/darkgreen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header"
-        app:srcCompat="@drawable/baseline_arrow_back_ios_new_24" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btnback2_foreground" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/serifdisplayregular"
+        android:layout_marginTop="92dp"
+        android:fontFamily="@font/archivoblackregular"
         android:text="Energías Renovables\n en Colombia "
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/serifregular"
+        android:text="Tipos"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollenergias"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/captura2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ScrollView
+        android:id="@+id/scrollenergias"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnsiguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/energia1"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ersolar"
+                app:shapeAppearanceOverlay="@style/radius" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/energia2"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ereolica"
+                app:shapeAppearanceOverlay="@style/radius" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/energia3"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="9dp"
+                android:src="@drawable/erhidraulica"
+                app:shapeAppearanceOverlay="@style/radius" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/energia4"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="9dp"
+                android:src="@drawable/ergeotermica"
+                app:shapeAppearanceOverlay="@style/radius" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/energia5"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="9dp"
+                android:src="@drawable/ermareomotriz"
+                app:shapeAppearanceOverlay="@style/radius" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/energia6"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="9dp"
+                android:src="@drawable/erbiomasa"
+                app:shapeAppearanceOverlay="@style/radius" />
+        </LinearLayout>
+    </ScrollView>
+
+
 
     <Button
         android:id="@+id/btnsiguiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="40dp"
         android:autoSizeTextType="uniform"
         android:backgroundTint="@color/darkgreen"
         android:fontFamily="@font/serifdisplayregular"
-        android:text="Siguiente"
+        android:text="Proyectos"
         android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/scrollenergias"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="380dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:srcCompat="@drawable/editadaenergias__renovables__en__colombia"
-        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

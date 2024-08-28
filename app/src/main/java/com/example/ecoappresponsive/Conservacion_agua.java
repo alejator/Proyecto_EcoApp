@@ -29,7 +29,7 @@ public class Conservacion_agua extends AppCompatActivity {
         btnAtras.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent regresar = new Intent(com.example.ecoappresponsive.Conservacion_agua.this,vista2.class);
+                Intent regresar = new Intent(com.example.ecoappresponsive.Conservacion_agua.this,Menu_agua.class);
                 startActivity(regresar);
             }
         });

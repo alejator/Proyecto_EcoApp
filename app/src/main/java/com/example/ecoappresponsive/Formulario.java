@@ -38,11 +38,11 @@ public class Formulario extends AppCompatActivity {
             public void onClick(View view) {
 
                 String registro = txtRegistro.getText().toString();
-                if (registro.equals("20")){
-                    Intent finalizar = new Intent(com.example.ecoappresponsive.Formulario.this,vista2.class);
-                    startActivity(finalizar);
-                } else {
+                if (registro.isEmpty()){
+
                     Toast.makeText(Formulario.this, "Llene el campo Registro consumo de agua", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Formulario.this, "Respuestas enviadas", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -51,7 +51,7 @@ public class Formulario extends AppCompatActivity {
         btnAtras.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent regresar = new Intent(com.example.ecoappresponsive.Formulario.this,Reciclaje.class);
+                Intent regresar = new Intent(com.example.ecoappresponsive.Formulario.this,vista2.class);
                 startActivity(regresar);
             }
         });

@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent ingresar = new Intent(MainActivity.this, vista2.class);
 
                 if (usuario.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Por favor ingresa tu usuario", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Por favor ingrese su usuario", Toast.LENGTH_SHORT).show();
                 } else if (contrasena.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Por favor ingresa tu contraseña", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Por favor ingrese su contraseña", Toast.LENGTH_SHORT).show();
                 } else {
                     startActivity(ingresar);}
             }

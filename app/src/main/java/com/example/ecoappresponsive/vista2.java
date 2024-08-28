@@ -3,7 +3,6 @@ package com.example.ecoappresponsive;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
@@ -29,7 +28,7 @@ public class vista2 extends AppCompatActivity {
         btnEnergia.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent vistaenergia = new Intent(com.example.ecoappresponsive.vista2.this,Energia_colombia.class);
+                Intent vistaenergia = new Intent(com.example.ecoappresponsive.vista2.this, MenuEnergia.class);
                 startActivity(vistaenergia);
             }
         });
@@ -38,7 +37,7 @@ public class vista2 extends AppCompatActivity {
         btnAgua.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent vistaagua = new Intent(com.example.ecoappresponsive.vista2.this,Conservacion_agua.class);
+                Intent vistaagua = new Intent(com.example.ecoappresponsive.vista2.this, Menu_agua.class);
                 startActivity(vistaagua);
             }
         });
@@ -58,6 +57,15 @@ public class vista2 extends AppCompatActivity {
             public void onClick(View v){
                 Intent vistaforms = new Intent(com.example.ecoappresponsive.vista2.this,Formulario.class);
                 startActivity(vistaforms);
+            }
+        });
+
+        ImageButton btnaccount = findViewById(R.id.btnaccount);
+        btnaccount.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent vistacuenta = new Intent(com.example.ecoappresponsive.vista2.this,Cuenta_usuario.class);
+                startActivity(vistacuenta);
             }
         });
     }

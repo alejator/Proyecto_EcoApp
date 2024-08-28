@@ -29,7 +29,7 @@ public class Energia_solar extends AppCompatActivity {
         btnAtras.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent regresar = new Intent(com.example.ecoappresponsive.Energia_solar.this,Proyectos.class);
+                Intent regresar = new Intent(com.example.ecoappresponsive.Energia_solar.this, MenuEnergia.class);
                 startActivity(regresar);
             }
         });

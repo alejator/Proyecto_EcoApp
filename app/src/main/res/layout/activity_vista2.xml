@@ -5,136 +5,167 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vista2"
-    android:background="#C3FFB6">
+    android:background="@drawable/fonodoverde3"
+    tools:context=".vista2">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/header"
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/transenereditada" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#568C59"
+        android:background="@color/darkgreen"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textologo"
+    <TextView
+        android:id="@+id/header_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/nordicalternativeregular"
+        android:text="EcoApp"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
+        android:fontFamily="@font/archivoblackregular"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Colombia puede liderar la transición energética que exige el planeta"
+
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnoticia">
+
+        <ImageButton
+            android:id="@+id/btnenergia"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="0dp"
-            android:fontFamily="@font/serifdisplayregular"
-            android:text="EcoApp"
-            android:textColor="#ffff"
-            android:textSize="50sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/header"
-            app:layout_constraintVertical_bias="0.0" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_inferior"
+            app:srcCompat="@drawable/logoenergy_foreground" />
 
-        <ImageView
-            android:id="@+id/imageView"
+        <ImageButton
+            android:id="@+id/btnagua"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="50dp"
-            app:layout_constraintEnd_toEndOf="@id/header"
-            app:layout_constraintTop_toTopOf="@id/header"
-            app:srcCompat="@drawable/logo_foreground" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_inferior"
+            app:srcCompat="@drawable/logowater_foreground" />
 
+        <ImageButton
+            android:id="@+id/btnreciclaje"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_inferior"
+            app:srcCompat="@drawable/logorecycle_foreground" />
+
+        <ImageButton
+            android:id="@+id/btnforms"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_inferior"
+            app:srcCompat="@drawable/logoform_foreground" />
+
+        <ImageButton
+            android:id="@+id/btnaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_inferior"
+            app:srcCompat="@drawable/account_foreground"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/serifdisplayregular"
-        android:text="Colombia puede liderar la transición energética que exige el planeta"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/serifregular"
+        android:text="Noticias"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/miImagen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_marginTop="24dp"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/miImagen"
+        android:layout_width="350dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/energiabiomasa"
+        app:layout_constraintBottom_toTopOf="@+id/txtnoticia"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/transicion_energetica" />
+        app:shapeAppearanceOverlay="@style/radius" />
 
-    <ImageButton
-        android:id="@+id/btnenergia"
-        android:layout_width="87dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
-        android:backgroundTint="@color/greenheader"
-        app:layout_constraintEnd_toStartOf="@+id/btnagua"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/logoenergy_foreground" />
-
-    <ImageButton
-        android:id="@+id/btnagua"
-        android:layout_width="87dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="30dp"
-        android:backgroundTint="@color/greenheader"
-        android:layout_marginTop="52dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintEnd_toStartOf="@+id/btnreciclaje"
-        app:layout_constraintStart_toEndOf="@+id/btnenergia"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/logowater_foreground" />
-
-    <ImageButton
-        android:id="@+id/btnreciclaje"
-        android:layout_width="87dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="4dp"
-        android:backgroundTint="@color/greenheader"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintEnd_toStartOf="@+id/btnforms"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logorecycle_foreground" />
-
-    <ImageButton
-        android:id="@+id/btnforms"
-        android:layout_width="87dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="28dp"
-        android:backgroundTint="@color/greenheader"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
+    <TextView
+        android:id="@+id/txtnoticia"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/serifregular"
+        android:paddingStart="5dp"
+        android:text="Conozca los beneficios de la energía por Biomasa"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logoform_foreground" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/captura2" />
+        app:layout_constraintTop_toBottomOf="@+id/miImagen"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

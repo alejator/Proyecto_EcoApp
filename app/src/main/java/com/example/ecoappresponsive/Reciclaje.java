@@ -29,7 +29,7 @@ public class Reciclaje extends AppCompatActivity {
         btnAtras.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent regresar = new Intent(com.example.ecoappresponsive.Reciclaje.this,Agua2.class);
+                Intent regresar = new Intent(com.example.ecoappresponsive.Reciclaje.this,vista2.class);
                 startActivity(regresar);
             }
         });

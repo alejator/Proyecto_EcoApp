@@ -14,175 +14,159 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/serifdisplayregular"
         android:padding="16dp"
         android:text="Registro"
         android:textColor="@color/white"
         android:textSize="50sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txt_nombre"
+
+    <ImageButton
+        android:id="@+id/btnatras"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btnback2_foreground" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:fontFamily="@font/serifdisplayregular"
-        android:text="  Nombre:"
-        android:textColor="@color/white"
-        android:textSize="30sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_registrarse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_registro" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <EditText
-        android:id="@+id/editNombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:ems="10"
-        android:fontFamily="@font/serifdisplayregular"
-        android:hint="Nombre"
-        android:inputType="text"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
+        <TextView
+            android:id="@+id/txt_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/serifdisplayregular"
+            android:text="  Nombre:"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="185dp" />
 
-    <TextView
-        android:id="@+id/txt_telefono"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:fontFamily="@font/serifdisplayregular"
-        android:text="  Telefono:"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editNombre" />
+        <EditText
+            android:id="@+id/editNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:fontFamily="@font/serifdisplayregular"
+            android:hint="Nombre"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/txt_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/serifdisplayregular"
+            android:text="  Teléfono:"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
 
 
-    <EditText
-        android:id="@+id/editTelefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:fontFamily="@font/serifdisplayregular"
-        android:hint="Telefono"
-        android:inputType="text"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_telefono" />
+        <EditText
+            android:id="@+id/editTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:fontFamily="@font/serifdisplayregular"
+            android:hint="Teléfono"
+            android:inputType="phone"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"/>
 
-    <TextView
-        android:id="@+id/txt_correo"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:fontFamily="@font/serifdisplayregular"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:text="  Correo:"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTelefono" />
+        <TextView
+            android:id="@+id/txt_correo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/serifdisplayregular"
+            android:text="  Correo:"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
 
-    <EditText
-        android:id="@+id/editCorreo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:fontFamily="@font/serifdisplayregular"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:hint="Correo"
-        android:inputType="text"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_correo" />
+        <EditText
+            android:id="@+id/editCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:fontFamily="@font/serifdisplayregular"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"/>
 
-    <TextView
-        android:id="@+id/Contrasena"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:fontFamily="@font/serifdisplayregular"
-        android:text="  Contraseña:"
-        android:textColor="@color/white"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editCorreo" />
+        <TextView
+            android:id="@+id/Contrasena"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/serifdisplayregular"
+            android:text="  Contraseña:"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
 
-    <EditText
-        android:id="@+id/editContrasena"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:fontFamily="@font/serifdisplayregular"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:textSize="20sp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Contrasena" />
+        <EditText
+            android:id="@+id/editContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:fontFamily="@font/serifdisplayregular"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="575dp"
+            android:layout_marginBottom="10dp"/>
 
-    <CheckBox
-        android:id="@+id/btncheckTerminos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:buttonTint="@color/white"
-        android:text="Acepto los términos y condiciones"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editContrasena" />
+        <CheckBox
+            android:id="@+id/btncheckTerminos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:buttonTint="@color/white"
+            android:text="Acepto los términos y condiciones"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="651dp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_registrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="84dp"
         android:backgroundTint="@color/darkgreen"
         android:fontFamily="@font/serifdisplayregular"
         android:text="Registrarse"
+        android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/img_footer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/img_footer"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/captura2" />
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
